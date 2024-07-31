@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch banco.json --port 3000" 
+   
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "glob": "^11.0.0",
+    "json-serve": "^0.1.0",
+    "json-server": "^1.0.0-beta.1"
+  }
+}
