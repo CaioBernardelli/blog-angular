@@ -1,0 +1,13 @@
+# Define end-of-line handling for text files
+* text=auto
+
+# Force LF for shell scripts and configuration files
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Force CRLF for Windows-specific files if needed
+*.bat text eol=crlf
+*.cmd text eol=crlf

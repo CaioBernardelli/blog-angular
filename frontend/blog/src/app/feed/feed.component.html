@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+      <div class="col-md-4">
+        <div class="card border-0" style="width: 18rem;">
+          <div class="d-flex justify-content-center">
+            <img src="https://i.im.ge/2024/07/26/VpM4DL.WhatsApp-Image-2024-01-31-at-21-39-52.jpeg" class="card-img-top rounded-circle" alt="Imagem do produto">
+          </div>
+          <link rel="icon" type="image/x-icon" href="favicon.ico">
+          <div class="card-body">
+            <h5 class="card-title text-center">Caio Bernardelli Quirino</h5>
+            <p class="card-text text-center">Desenvolvedor de Software</p>
+            <a href="#" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">Github</a>
+            <hr class="mt-4 mb-4">
+            <h6 class="mb-3 text-monospace text-center">Pesquisar por título</h6>
+            <input type="text" class="form-control mb-3 w-100">
+            <button class="btn btn-outline-warning w-100">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <form [formGroup]="postForm" (ngSubmit)="publicarMensagem()">
+          <div>
+            <h3 class="text-center mb-4 text-monospace">Digite abaixo seus comentários</h3>
+            <div class="form-group mt-5 mb-5">
+              <label for="nome" class="text-monospace">Nome:</label>
+              <input type="text" id="nome" formControlName="nome" class="form-control" placeholder="Digite o seu nome">
+              <!-- Exibe mensagem de erro se o campo 'nome' for inválido -->
+              <div *ngIf="postForm.get('nome')?.invalid && (postForm.get('nome')?.dirty || postForm.get('nome')?.touched)" class="text-danger">
+                Nome é obrigatório e deve ter pelo menos 3 caracteres.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mensagem" class="text-monospace">Mensagem:</label>
+              <textarea id="mensagem" formControlName="mensagem" cols="30" rows="4" class="form-control" placeholder="Digite a sua mensagem"></textarea>
+              <!-- Exibe mensagem de erro se o campo 'mensagem' for inválido -->
+              <div *ngIf="postForm.get('mensagem')?.invalid && (postForm.get('mensagem')?.dirty || postForm.get('mensagem')?.touched)" class="text-danger">
+                Mensagem é obrigatória e deve ter pelo menos 10 caracteres.
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+              <button type="submit" class="btn btn-outline-info w-25" [disabled]="postForm.invalid">Publicar</button>
+            </div>
+          </div>
+        </form>
+        <hr class="mt-5 mb-5">
+        <h3 class="text-center mb-5 text-monospace">Comentários adicionados</h3>
+        <div class="container">
+          <div class="card mb-4" *ngFor="let postagem of listPost">
+            <div class="card-header bg-light font-weight-bold">
+              <h5 class="card-title text-center">{{postagem.id}}</h5>
+            </div>
+            <div class="card-body">
+              <p>{{postagem.nome}}</p>
+              <p>{{postagem.mensagem}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

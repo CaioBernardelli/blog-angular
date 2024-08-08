@@ -1,0 +1,50 @@
+.iconface,
+.iconinst,
+.icontt,
+.iconzap {
+    color: black;
+
+
+}
+
+.iconface:hover {
+    color: #3b5998;
+
+}
+
+.iconzap:hover {
+
+
+    color: rgb(66, 250, 66);
+}
+
+.iconinst:hover {
+    color: #c13584;
+}
+
+.icontt:hover {
+    color: #0072b1;
+
+}
+
+.list-unstyled>li {
+    font-size: 20px;
+
+
+}
+
+.list-unstyled {
+    padding: 0;
+    margin: 0;
+
+}
+
+.col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    /* Alinha os itens verticalmente */
+    align-items: center;
+
+
+
+}
