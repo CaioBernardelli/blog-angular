@@ -1,3 +1,29 @@
 img {
     width: 150px;
 }
+
+.btn-remove {
+    border-radius: 50%; /* Tornar o botão circular */
+    width: 40px; /* Definir largura do botão */
+    height: 40px; /* Definir altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-remove i {
+    font-size: 16px; /* Tamanho do ícone dentro do botão */
+  }
+  
+  /* Centralizar botão dentro do card */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-body p {
+    text-align: center;
+  }
+  

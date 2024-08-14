@@ -16,9 +16,11 @@ export class PostService {
     return this.httpClient.get<Post[]>(this.apiUrl);
   }
 
-  
   postMensagem(post: Post): Observable<Post> {
     return this.httpClient.post<Post>(this.apiUrl, post);
+  }
 
+  deletePost(id: number): Observable<void> {
+    return this.httpClient.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
