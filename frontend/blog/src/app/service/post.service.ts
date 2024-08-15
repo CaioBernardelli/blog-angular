@@ -23,4 +23,7 @@ export class PostService {
   deletePost(id: number): Observable<void> {
     return this.httpClient.delete<void>(`${this.apiUrl}/${id}`);
   }
+  
+
+
 }

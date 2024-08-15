@@ -3,7 +3,8 @@
     <div class="col-md-4">
       <div class="card border-0" style="width: 18rem;">
         <div class="d-flex justify-content-center">
-          <img src="https://i.im.ge/2024/07/26/VpM4DL.WhatsApp-Image-2024-01-31-at-21-39-52.jpeg" class="card-img-top rounded-circle" alt="Imagem do produto">
+          <img src="https://i.im.ge/2024/07/26/VpM4DL.WhatsApp-Image-2024-01-31-at-21-39-52.jpeg"
+            class="card-img-top rounded-circle" alt="Imagem do produto">
         </div>
         <div class="card-body">
           <h5 class="card-title text-center">Caio Bernardelli Quirino</h5>
@@ -23,14 +24,18 @@
           <div class="form-group mt-5 mb-5">
             <label for="nome" class="text-monospace">Nome:</label>
             <input type="text" id="nome" formControlName="nome" class="form-control" placeholder="Digite o seu nome">
-            <div *ngIf="postForm.get('nome')?.invalid && (postForm.get('nome')?.dirty || postForm.get('nome')?.touched)" class="text-danger">
+            <div *ngIf="postForm.get('nome')?.invalid && (postForm.get('nome')?.dirty || postForm.get('nome')?.touched)"
+              class="text-danger">
               Nome é obrigatório e deve ter pelo menos 3 caracteres.
             </div>
           </div>
           <div class="form-group">
             <label for="mensagem" class="text-monospace">Mensagem:</label>
-            <textarea id="mensagem" formControlName="mensagem" cols="30" rows="4" class="form-control" placeholder="Digite a sua mensagem"></textarea>
-            <div *ngIf="postForm.get('mensagem')?.invalid && (postForm.get('mensagem')?.dirty || postForm.get('mensagem')?.touched)" class="text-danger">
+            <textarea id="mensagem" formControlName="mensagem" cols="30" rows="4" class="form-control"
+              placeholder="Digite a sua mensagem"></textarea>
+            <div
+              *ngIf="postForm.get('mensagem')?.invalid && (postForm.get('mensagem')?.dirty || postForm.get('mensagem')?.touched)"
+              class="text-danger">
               Mensagem é obrigatória e deve ter pelo menos 10 caracteres.
             </div>
           </div>
@@ -44,16 +49,25 @@
       <div class="container">
         <div class="card mb-4" *ngFor="let postagem of listPost">
           <div class="card-header bg-light font-weight-bold">
-            <h5 class="card-title text-center">{{postagem.id}}</h5>
+            <h5 class="card-title text-center">{{postagem.nome}}</h5>
           </div>
           <div class="card-body">
-            <p>{{postagem.nome}}</p>
             <p>{{postagem.mensagem}}</p>
           </div>
-          <button type="button" class="btn btn-outline-danger btn-sm btn-remove" (click)="remover(postagem)">
-            <i class="bi bi-trash"></i>
-          </button>
+       <!-- Botão para remover (Vermelho) -->
+<button type="button" class="btn btn-outline-danger btn-sm btn-remove text-center" (click)="remover(postagem)">
+  <mat-icon>delete</mat-icon>
+</button>
+
+<!-- Botão para alterar (Azul) -->
+<button type="button" class="btn btn-outline-primary btn-sm btn-remove" (click)="remover(postagem)">
+  <mat-icon>edit</mat-icon> 
+</button>
+        
+        
         </div>
+
+
       </div>
     </div>
   </div>

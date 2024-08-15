@@ -48,3 +48,27 @@
 
 
 }
+
+footer {
+    padding:  0; /* Ajuste o valor conforme necessário */
+}
+
+footer .container {
+    padding: 0px; /* Ajuste o valor conforme necessário */
+}
+
+footer .row {
+    margin: 0; /* Remove a margem das linhas */
+}
+
+footer h5 {
+    margin-bottom: 0px; /* Reduz a margem abaixo dos títulos */
+}
+
+footer p, footer ul {
+    margin-bottom: 0; /* Reduz a margem abaixo dos parágrafos e listas */
+}
+
+footer ul li {
+    margin-bottom: 0; /* Reduz a margem abaixo dos itens de lista */
+}

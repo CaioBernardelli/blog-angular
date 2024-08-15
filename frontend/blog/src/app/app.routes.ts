@@ -8,7 +8,8 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path:'feed', component: FeedComponent},
-  {path:'contato', component: ContatoComponent }
+  { path: 'contato', component: ContatoComponent },
+
   ];
 
 @NgModule({
