@@ -54,17 +54,19 @@
           <div class="card-body">
             <p>{{postagem.mensagem}}</p>
           </div>
-       <!-- Botão para remover (Vermelho) -->
-<button type="button" class="btn btn-outline-danger btn-sm btn-remove text-center" (click)="remover(postagem)">
-  <mat-icon>delete</mat-icon>
-</button>
+          <div class="d-flex justify-content-center ">
+            <!-- Botão para remover (Vermelho) -->
+            <button type="button" class="btn btn-outline-danger btn-sm btn-remove text-center me-2"
+              (click)="remover(postagem)">
+              <mat-icon>delete</mat-icon>
+            </button>
 
-<!-- Botão para alterar (Azul) -->
-<button type="button" class="btn btn-outline-primary btn-sm btn-remove" (click)="remover(postagem)">
-  <mat-icon>edit</mat-icon> 
-</button>
-        
-        
+            <!-- Botão para alterar (Azul) -->
+            <button type="button" class="btn btn-outline-primary btn-sm btn-remove" (click)="remover(postagem)">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+
         </div>
 
 

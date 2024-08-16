@@ -26,4 +26,13 @@ img {
   .card-body p {
     text-align: center;
   }
+
+
+.buttons{
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre os botões */
+}
   
